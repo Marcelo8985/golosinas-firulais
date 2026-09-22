@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- OPTIMIZACIÓN: Título enfocado en la intención de contacto y ubicación local -->
+<title>Contacto | Las Golosinas del Firulais - Pastelería para Mascotas en Quito</title>
+<!-- OPTIMIZACIÓN: Meta descripción clara para animar al usuario a escribir -->
+<meta name="description" content="¿Quieres celebrar a lo grande? Contáctanos para pedidos de tortas y bocaditos personalizados para tu perro o gato en Quito. Escríbenos por WhatsApp.">
+
+<!-- OPTIMIZACIÓN: Open Graph para que al enviar el link por WhatsApp se vea profesional -->
+<meta property="og:title" content="Contacto - Las Golosinas del Firulais">
+<meta property="og:description" content="Haz el pedido para la fiesta de tu mascota. Escríbenos y personaliza su torta.">
+<meta property="og:image" content="img/logo.jpeg">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="cabecera">
+  <div class="cabecera-inner">
+    <div class="marca">
+      <img src="img/logo.jpeg" alt="Logo Las Golosinas del Firulais" class="logo">
+      <div>
+        <h1>Las Golosinas del Firulais</h1>
+        <span class="slogan">Repostería y pastelería para perros y gatos</span>
+      </div>
+    </div>
+    <button class="menu-toggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="empresa.html">EMPRESA</a></li>
+      <li><a href="productos.html">PRODUCTOS</a></li>
+      <li><a href="oferta.html">OFERTA DEL MES</a></li>
+      <li><a href="localizacion.html">LOCALIZACIÓN</a></li>
+      <li><a href="contacto.html">CONTACTO</a></li>
+      <li><a href="noticias.html">NOTICIAS</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- OPTIMIZACIÓN: Etiqueta <main> para decirle a Google cuál es el contenido principal de esta URL -->
+<main>
+  <section>
+    <div class="container">
+      <!-- OPTIMIZACIÓN: Cambiamos <h3> por <h2> para mantener una jerarquía lógica de títulos -->
+      <h2 class="titulo-seccion">Contáctanos</h2>
+      <p class="subtitulo">Cuéntanos sobre la fiesta de tu mascota</p>
+
+      <form class="form-contacto" id="form-contacto" novalidate>
+        <label for="nombre">Nombre <span style="color:#c0392b;">*</span></label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+        <span class="error" id="error-nombre"></span>
+
+        <label for="email">E-Mail <span style="color:#c0392b;">*</span></label>
+        <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com">
+        <span class="error" id="error-email"></span>
+
+        <label for="mensaje">Mensaje <span style="color:#c0392b;">*</span></label>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos qué necesitas..."></textarea>
+        <span class="error" id="error-mensaje"></span>
+
+        <button type="submit" class="btn" style="width:100%;margin-top:20px;" id="btn-guardar-contacto">Guardar</button>
+        <div id="mensaje-exito"></div>
+      </form>
+
+      <p style="text-align:center;margin-top:24px;">
+        También puedes escribirnos directo a
+        <a href="https://wa.me/593958878266" target="_blank" style="color:var(--naranja);font-weight:700;">WhatsApp: 095 887 8266</a>
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="container pie-grid">
+    <div>
+      <h5>Las Golosinas del Firulais</h5>
+      <p>Repostería y pastelería artesanal para perros y gatos, hecha en Quito con mucho cariño.</p>
+    </div>
+    <div>
+      <h5>Horario de atención</h5>
+      <p>Lunes a viernes: 9:00 – 19:00<br>Sábados: 9:00 – 14:00</p>
+    </div>
+    <div>
+      <h5>Contacto</h5>
+      <p>Quito, Carcelén<br>WhatsApp: 095 887 8266<br>Facebook: /lasgolosinasdelfirulais</p>
+    </div>
+  </div>
+  <p class="copy">&copy; <span id="anio"></span> Las Golosinas del Firulais. Todos los derechos reservados.</p>
+</footer>
+
+<!-- OPTIMIZACIÓN: defer en los scripts para evitar bloqueo de renderizado -->
+<script src="js/jquery.min.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

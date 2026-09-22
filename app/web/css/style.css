@@ -1,0 +1,437 @@
+/* ===========================================================
+   Las Golosinas del Firulais — Hoja de estilos principal
+   =========================================================== */
+
+:root {
+  --marron: #6b4226;
+  --marron-oscuro: #4a2c17;
+  --crema: #fdf3e3;
+  --naranja: #f2994a;
+  --rosa: #f4a6b7;
+  --texto: #3a2416;
+  --blanco: #ffffff;
+  --sombra: 0 4px 14px rgba(74, 44, 23, 0.15);
+  --radio: 14px;
+  --fuente: 'Poppins', 'Segoe UI', Arial, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--fuente);
+  background: var(--crema);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+img { max-width: 100%; display: block; }
+
+a { text-decoration: none; color: inherit; }
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- CABECERA ---------- */
+header.cabecera {
+  background: var(--blanco);
+  box-shadow: var(--sombra);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.cabecera-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.marca img.logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 2px solid var(--naranja);
+}
+
+.marca h1 {
+  font-size: 1.4rem;
+  color: var(--marron-oscuro);
+}
+
+.marca span.slogan {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--naranja);
+  font-weight: 600;
+}
+
+/* ---------- NAV ---------- */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.menu-toggle span {
+  width: 26px;
+  height: 3px;
+  background: var(--marron-oscuro);
+  border-radius: 2px;
+}
+
+nav.navbar {
+  background: var(--marron);
+}
+
+nav.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+nav.navbar li { flex: 1; text-align: center; }
+
+nav.navbar a {
+  display: block;
+  padding: 14px 10px;
+  color: var(--crema);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.3px;
+  transition: background 0.2s ease;
+}
+
+nav.navbar a:hover,
+nav.navbar a.activo {
+  background: var(--naranja);
+  color: var(--marron-oscuro);
+}
+
+/* ---------- HERO / CUERPO ---------- */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 320px;
+  overflow: hidden;
+}
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero .hero-texto {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(74,44,23,0.15), rgba(74,44,23,0.65));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--blanco);
+  padding: 20px;
+}
+.hero .hero-texto h2 {
+  font-size: 2.4rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+.hero .hero-texto p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  max-width: 600px;
+}
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: var(--naranja);
+  color: var(--marron-oscuro);
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 700;
+  box-shadow: var(--sombra);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+
+section {
+  padding: 50px 0;
+}
+
+section h3.titulo-seccion {
+  text-align: center;
+  color: var(--marron-oscuro);
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+.subtitulo {
+  text-align: center;
+  color: var(--naranja);
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: var(--blanco);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+.card:hover { transform: translateY(-6px); }
+.card img { height: 190px; object-fit: cover; width: 100%; }
+.card-body { padding: 16px; }
+.card-body h4 { color: var(--marron-oscuro); margin-bottom: 6px; }
+.card-body p { font-size: 0.92rem; color: #6a5644; }
+.precio {
+  display: inline-block;
+  margin-top: 10px;
+  background: var(--rosa);
+  color: var(--marron-oscuro);
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.franja {
+  background: var(--marron);
+  color: var(--crema);
+}
+.franja h3, .franja .subtitulo { color: var(--crema); }
+
+table.horarios {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: var(--blanco);
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+}
+table.horarios th, table.horarios td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #f0e2cd;
+}
+table.horarios th { background: var(--naranja); color: var(--marron-oscuro); }
+
+.oferta-box {
+  background: var(--blanco);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  padding: 30px;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+.oferta-box .badge {
+  display: inline-block;
+  background: var(--naranja);
+  color: var(--marron-oscuro);
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+#contador {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--marron);
+  margin-top: 14px;
+}
+
+form.form-contacto {
+  max-width: 520px;
+  margin: 0 auto;
+  background: var(--blanco);
+  padding: 30px;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+form.form-contacto label {
+  display: block;
+  margin-top: 14px;
+  font-weight: 600;
+  color: var(--marron-oscuro);
+  font-size: 0.9rem;
+}
+form.form-contacto input,
+form.form-contacto select,
+form.form-contacto textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border: 1px solid #e3d2b8;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+.error { color: #c0392b; font-size: 0.8rem; margin-top: 4px; display: none; }
+#mensaje-exito {
+  display: none;
+  background: #dff5e1;
+  color: #256d34;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 16px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.noticia {
+  background: var(--blanco);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  padding: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.noticia h4 { color: var(--marron-oscuro); }
+.noticia .fecha { color: var(--naranja); font-size: 0.8rem; font-weight: 600; margin-bottom: 6px; }
+.noticia .contenido-extra { display: none; margin-top: 10px; }
+
+.mapa-wrap {
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+}
+.mapa-wrap iframe { width: 100%; height: 380px; border: 0; }
+
+.info-lista {
+  list-style: none;
+}
+.info-lista li {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+  align-items: flex-start;
+}
+.info-lista strong { color: var(--marron-oscuro); }
+
+/* ---------- PIE DE PÁGINA ---------- */
+footer.pie {
+  background: var(--marron-oscuro);
+  color: var(--crema);
+  padding: 34px 0 18px;
+  margin-top: 40px;
+}
+footer.pie .pie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+footer.pie h5 { margin-bottom: 10px; color: var(--naranja); }
+footer.pie p, footer.pie li { font-size: 0.88rem; }
+footer.pie .copy {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 0.78rem;
+  color: #cbb99f;
+  border-top: 1px solid #6b4226;
+  padding-top: 14px;
+}
+
+/* ---------- CLIMA (nav + widget) ---------- */
+nav.navbar li.nav-clima a {
+  background: #4a90d9;
+  color: #ffffff;
+}
+nav.navbar li.nav-clima a:hover,
+nav.navbar li.nav-clima a.activo {
+  background: #3574b5;
+  color: #ffffff;
+}
+
+.clima-box {
+  max-width: 620px;
+  margin: 0 auto;
+  background: var(--blanco);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  padding: 34px;
+  text-align: center;
+}
+.clima-box .btn-clima {
+  background: #4a90d9;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+}
+.clima-box .btn-clima:hover { background: #3574b5; }
+.clima-resultado {
+  margin-top: 26px;
+  display: none;
+}
+.clima-resultado .ciudad-clima {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--marron-oscuro);
+  margin-bottom: 14px;
+}
+.clima-datos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.clima-dato {
+  background: #eaf3fc;
+  border-radius: 10px;
+  padding: 16px;
+}
+.clima-dato .valor { font-size: 1.5rem; font-weight: 700; color: #3574b5; }
+.clima-dato .etiqueta { font-size: 0.8rem; color: #6a5644; margin-top: 4px; }
+.clima-error {
+  display: none;
+  background: #fbe4e1;
+  color: #a12f22;
+  padding: 14px;
+  border-radius: 8px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+.clima-cargando { display: none; margin-top: 18px; color: #6a5644; }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 820px) {
+  nav.navbar ul {
+    flex-direction: column;
+    display: none;
+  }
+  nav.navbar ul.abierto { display: flex; }
+  .menu-toggle { display: flex; }
+  .hero .hero-texto h2 { font-size: 1.7rem; }
+}

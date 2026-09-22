@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- OPTIMIZACIÓN: Título SEO enfocado en la intención de búsqueda del catálogo -->
+<title>Catálogo de Productos | Las Golosinas del Firulais - Pastelería para Mascotas</title>
+<!-- OPTIMIZACIÓN: Meta descripción descriptiva para atraer posibles clientes -->
+<meta name="description" content="Explora nuestro catálogo de tortas, galletas y bocaditos artesanales para perros y gatos. Filtra por categorías y encuentra la golosina perfecta para tu mascota.">
+
+<!-- OPTIMIZACIÓN: Open Graph para compartir el enlace del catálogo en redes -->
+<meta property="og:title" content="Catálogo de Productos - Las Golosinas del Firulais">
+<meta property="og:description" content="Descubre nuestra variedad de repostería 100% segura para tu mejor amigo.">
+<meta property="og:image" content="img/logo.jpeg">
+
+<link rel="stylesheet" href="css/style.css">
+<style>
+.filtros { text-align:center; margin-bottom: 30px; }
+.filtro-btn {
+  background: var(--blanco);
+  border: 2px solid var(--naranja);
+  color: var(--marron-oscuro);
+  padding: 8px 18px;
+  border-radius: 20px;
+  margin: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: inherit;
+}
+.filtro-btn.activo-filtro, .filtro-btn:hover { background: var(--naranja); }
+#estado-carga-productos { text-align:center; color:#6a5644; padding: 30px 0; }
+</style>
+</head>
+<body>
+
+<header class="cabecera">
+  <div class="cabecera-inner">
+    <div class="marca">
+      <img src="img/logo.jpeg" alt="Logo Las Golosinas del Firulais" class="logo">
+      <div>
+        <h1>Las Golosinas del Firulais</h1>
+        <span class="slogan">Repostería y pastelería para perros y gatos</span>
+      </div>
+    </div>
+    <button class="menu-toggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="empresa.html">EMPRESA</a></li>
+      <li><a href="productos.html">PRODUCTOS</a></li>
+      <li><a href="oferta.html">OFERTA DEL MES</a></li>
+      <li><a href="localizacion.html">LOCALIZACIÓN</a></li>
+      <li><a href="contacto.html">CONTACTO</a></li>
+      <li><a href="noticias.html">NOTICIAS</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- OPTIMIZACIÓN: Etiqueta <main> para aislar el contenedor del catálogo -->
+<main>
+  <section>
+    <div class="container">
+      <!-- OPTIMIZACIÓN: Corrección del h3 a h2 para la jerarquía de encabezados -->
+      <h2 class="titulo-seccion">Nuestro catálogo</h2>
+      <p class="subtitulo">Descubre nuestras delicias artesanales</p>
+
+      <div class="filtros" id="filtros"></div>
+
+      <p id="estado-carga-productos">Cargando productos...</p>
+      <div class="grid-cards" id="grid-productos"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="container pie-grid">
+    <div>
+      <h5>Las Golosinas del Firulais</h5>
+      <p>Repostería y pastelería artesanal para perros y gatos, hecha en Quito con mucho cariño.</p>
+    </div>
+    <div>
+      <h5>Horario de atención</h5>
+      <p>Lunes a viernes: 9:00 – 19:00<br>Sábados: 9:00 – 14:00</p>
+    </div>
+    <div>
+      <h5>Contacto</h5>
+      <p>Quito, Carcelén<br>WhatsApp: 095 887 8266<br>Facebook: /lasgolosinasdelfirulais</p>
+    </div>
+  </div>
+  <p class="copy">&copy; <span id="anio"></span> Las Golosinas del Firulais. Todos los derechos reservados.</p>
+</footer>
+
+<!-- OPTIMIZACIÓN: defer en scripts para que no bloqueen la carga del HTML y CSS -->
+<script src="js/jquery.min.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

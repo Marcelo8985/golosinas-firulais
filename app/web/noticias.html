@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- OPTIMIZACIÓN: Título SEO descriptivo para la sección del blog/noticias -->
+<title>Noticias y Novedades | Las Golosinas del Firulais en Quito</title>
+<!-- OPTIMIZACIÓN: Meta descripción para invitar a leer los eventos y actualizaciones -->
+<meta name="description" content="Entérate de nuestros últimos eventos, nuevos productos y noticias sobre el mundo de la repostería para perros y gatos en Quito.">
+
+<!-- OPTIMIZACIÓN: Etiquetas Open Graph para compartir las noticias en redes sociales -->
+<meta property="og:title" content="Noticias - Las Golosinas del Firulais">
+<meta property="og:description" content="Descubre las últimas novedades y eventos de nuestra pastelería para mascotas.">
+<meta property="og:image" content="img/logo.jpeg">
+
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* Los estilos se mantienen intactos */
+.noticia-dinamica {
+  background: var(--blanco);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+  margin-bottom: 24px;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+}
+.noticia-dinamica img { width:100%; height:100%; object-fit:cover; }
+.noticia-dinamica .contenido-noticia { padding: 20px; }
+.noticia-dinamica .fecha { color: var(--naranja); font-size:0.8rem; font-weight:700; margin-bottom:6px; }
+.noticia-dinamica h4 { color: var(--marron-oscuro); margin-bottom:8px; }
+#estado-carga-noticias { text-align:center; color:#6a5644; padding: 20px 0; }
+@media (max-width: 620px) { .noticia-dinamica { grid-template-columns: 1fr; } .noticia-dinamica img { height:160px; } }
+</style>
+</head>
+<body>
+
+<header class="cabecera">
+  <div class="cabecera-inner">
+    <div class="marca">
+      <img src="img/logo.jpeg" alt="Logo Las Golosinas del Firulais" class="logo">
+      <div>
+        <h1>Las Golosinas del Firulais</h1>
+        <span class="slogan">Repostería y pastelería para perros y gatos</span>
+      </div>
+    </div>
+    <button class="menu-toggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="empresa.html">EMPRESA</a></li>
+      <li><a href="productos.html">PRODUCTOS</a></li>
+      <li><a href="oferta.html">OFERTA DEL MES</a></li>
+      <li><a href="localizacion.html">LOCALIZACIÓN</a></li>
+      <li><a href="contacto.html">CONTACTO</a></li>
+      <li><a href="noticias.html">NOTICIAS</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- OPTIMIZACIÓN: Etiqueta <main> para indicarle al buscador la zona de inyección de contenido -->
+<main>
+  <section>
+    <div class="container">
+      <!-- OPTIMIZACIÓN: Corrección del h3 a h2 para la jerarquía de lectura -->
+      <h2 class="titulo-seccion">Noticias</h2>
+      <p class="subtitulo">Últimas novedades y eventos</p>
+
+      <!-- Contenedor dinámico (SEO Friendly si el JS ejecuta rápido gracias al defer) -->
+      <p id="estado-carga-noticias">Cargando noticias...</p>
+      <div id="lista-noticias"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="container pie-grid">
+    <div>
+      <h5>Las Golosinas del Firulais</h5>
+      <p>Repostería y pastelería artesanal para perros y gatos, hecha en Quito con mucho cariño.</p>
+    </div>
+    <div>
+      <h5>Horario de atención</h5>
+      <p>Lunes a viernes: 9:00 – 19:00<br>Sábados: 9:00 – 14:00</p>
+    </div>
+    <div>
+      <h5>Contacto</h5>
+      <p>Quito, Carcelén<br>WhatsApp: 095 887 8266<br>Facebook: /lasgolosinasdelfirulais</p>
+    </div>
+  </div>
+  <p class="copy">&copy; <span id="anio"></span> Las Golosinas del Firulais. Todos los derechos reservados.</p>
+</footer>
+
+<!-- OPTIMIZACIÓN: defer crítico aquí para que las noticias carguen sin bloquear el render del HTML -->
+<script src="js/jquery.min.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

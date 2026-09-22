@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- OPTIMIZACIÓN: Título enfocado en SEO Local (Ubicación exacta y ciudad) -->
+<title>Ubicación | Las Golosinas del Firulais - Carcelén, Quito</title>
+<!-- OPTIMIZACIÓN: Meta descripción optimizada para búsquedas locales -->
+<meta name="description" content="Visítanos o pide a domicilio. Nuestra pastelería para perros y gatos está ubicada en el sector Carcelén, Quito. Entregas coordinadas por WhatsApp.">
+
+<!-- OPTIMIZACIÓN: Open Graph para compartir la ubicación correctamente en redes -->
+<meta property="og:title" content="Ubicación de Las Golosinas del Firulais en Quito">
+<meta property="og:description" content="Encuentra nuestra pastelería artesanal para mascotas en el sector Carcelén, Quito.">
+<meta property="og:image" content="img/logo.jpeg">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="cabecera">
+  <div class="cabecera-inner">
+    <div class="marca">
+      <img src="img/logo.jpeg" alt="Logo Las Golosinas del Firulais" class="logo">
+      <div>
+        <h1>Las Golosinas del Firulais</h1>
+        <span class="slogan">Repostería y pastelería para perros y gatos</span>
+      </div>
+    </div>
+    <button class="menu-toggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="empresa.html">EMPRESA</a></li>
+      <li><a href="productos.html">PRODUCTOS</a></li>
+      <li><a href="oferta.html">OFERTA DEL MES</a></li>
+      <li><a href="localizacion.html">LOCALIZACIÓN</a></li>
+      <li><a href="contacto.html">CONTACTO</a></li>
+      <li><a href="noticias.html">NOTICIAS</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- OPTIMIZACIÓN: Etiqueta <main> para estructura semántica -->
+<main>
+  <section>
+    <div class="container">
+      <!-- OPTIMIZACIÓN: Cambiamos <h3> por <h2> para respetar la jerarquía -->
+      <h2 class="titulo-seccion">Encuéntranos</h2>
+      <p class="subtitulo">Quito – Sector Carcelén</p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start;">
+        <div class="mapa-wrap">
+          <!-- OPTIMIZACIÓN: Se agregó el atributo 'title' al iframe para SEO y accesibilidad -->
+          <iframe src="https://www.google.com/maps?q=Carcel%C3%A9n,+Quito,+Ecuador&output=embed" loading="lazy" title="Mapa de ubicación de Las Golosinas del Firulais en Carcelén, Quito"></iframe>
+        </div>
+        <ul class="info-lista">
+          <li><strong>📍 Dirección:</strong> Sector Carcelén, Quito, Ecuador</li>
+          <li><strong>🕒 Horario:</strong> Lunes a viernes 9:00–19:00, sábados 9:00–14:00</li>
+          <li><strong>📱 WhatsApp:</strong> 095 887 8266</li>
+          <li><strong>📘 Facebook:</strong> facebook.com/lasgolosinasdelfirulais</li>
+          <li><strong>🚚 Entregas:</strong> A domicilio dentro de Quito, coordinadas por WhatsApp</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<style>
+@media (max-width: 820px) {
+  section .container > div { grid-template-columns: 1fr !important; }
+}
+</style>
+
+<footer class="pie">
+  <div class="container pie-grid">
+    <div>
+      <h5>Las Golosinas del Firulais</h5>
+      <p>Repostería y pastelería artesanal para perros y gatos, hecha en Quito con mucho cariño.</p>
+    </div>
+    <div>
+      <h5>Horario de atención</h5>
+      <p>Lunes a viernes: 9:00 – 19:00<br>Sábados: 9:00 – 14:00</p>
+    </div>
+    <div>
+      <h5>Contacto</h5>
+      <p>Quito, Carcelén<br>WhatsApp: 095 887 8266<br>Facebook: /lasgolosinasdelfirulais</p>
+    </div>
+  </div>
+  <p class="copy">&copy; <span id="anio"></span> Las Golosinas del Firulais. Todos los derechos reservados.</p>
+</footer>
+
+<!-- OPTIMIZACIÓN: defer en scripts -->
+<script src="js/jquery.min.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

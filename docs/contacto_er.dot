@@ -1,0 +1,14 @@
+digraph ContactoER {
+  graph [fontname="Helvetica", bgcolor="white"];
+  node [fontname="Helvetica", fontsize=12];
+
+  Contacto [shape=none, margin=0, label=<
+    <TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" BGCOLOR="#fdf3e3" COLOR="#6b4226">
+      <TR><TD BGCOLOR="#6b4226"><FONT COLOR="white"><B>CONTACTO</B></FONT></TD></TR>
+      <TR><TD ALIGN="LEFT">▸ id_contacto (PK)</TD></TR>
+      <TR><TD ALIGN="LEFT">nombre</TD></TR>
+      <TR><TD ALIGN="LEFT">email</TD></TR>
+      <TR><TD ALIGN="LEFT">mensaje</TD></TR>
+      <TR><TD ALIGN="LEFT">fecha</TD></TR>
+    </TABLE>>];
+}

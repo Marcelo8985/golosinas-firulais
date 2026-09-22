@@ -1,0 +1,6 @@
+﻿app/.env
+app/golosinas_firulais.db
+ftp_demo/ftp_storage/
+ftp_demo/contactos_export.csv
+__pycache__/
+*.pyc
