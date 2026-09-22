@@ -28,6 +28,8 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 WEB_DIR = os.path.join(BASE_DIR, "web")
 
 app = Flask(__name__, static_folder=WEB_DIR, static_url_path="")
+database.crear_tablas()
+database.sembrar_datos_iniciales()
 
 REGEX_EMAIL = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
 
@@ -114,7 +116,4 @@ def api_noticias():
     return jsonify(database.listar_noticias())
 
 
-if __name__ == "__main__":
-    database.crear_tablas()
-    database.sembrar_datos_iniciales()
-    app.run(host="0.0.0.0", port=5000, debug=False)
+
